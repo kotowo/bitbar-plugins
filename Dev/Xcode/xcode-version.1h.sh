@@ -5,6 +5,6 @@
 # <bitbar.author.github>hirschfl</bitbar.author.github>
 # <bitbar.desc>Shows the Xcode version that is currently selected with xcode-select.</bitbar.desc>
 # <bitbar.dependencies>xcodebuild</bitbar.dependencies>
-version=$(xcodebuild -version | head -1 | awk '{print $1}')
-build=$(xcodebuild -version | grep -i "bu|ild version" | awk '{print $3}')
-echo "􀤊${version}(${build})"
+version=$(xcodebuild -version | head -1 | awk '{print $2}')
+build=$(xcodebuild -version | grep -i "build version" | awk '{print $3}')
+echo "🛠${version} (${build})"
