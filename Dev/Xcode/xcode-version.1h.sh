@@ -8,4 +8,5 @@
 
 xcode=$(xcodebuild -version | head -1)
 build=$(xcodebuild -version | grep -i "build version" | awk '{print $3}')
-echo "${xcode}(${build})"
+echo "${xcode} (${build})"
+
